@@ -10,7 +10,6 @@ const sitesOutput = (async () => {
   const page = await browser.newPage();
   const result = [];
   const assets = ['https://foxsports.com/'];
-  //const aHandle = await page.evaluate('1 + 2');
   await page.setRequestInterception(true);
 
   page.on('request', request => {
@@ -41,13 +40,15 @@ const sitesOutput = (async () => {
     path: 'screenshot.jpg',
   });
 
+  // const sendVisit = await page.evaluate(
+  //   ope("foxus", "sendVisit", {
+  //     "visitUrl": window.location.href
+  //   })
+  //   );
+
+
   await browser.close();
   return result;
 })();
 
 export default sitesOutput;
-
-
-
-
-
