@@ -9,7 +9,7 @@ const sitesOutput = (async () => {
     });
   const page = await browser.newPage();
   const result = [];
-  const assets = ['https://foxsports.com/'];
+  const assets = [''];
   await page.setRequestInterception(true);
 
   page.on('request', request => {
